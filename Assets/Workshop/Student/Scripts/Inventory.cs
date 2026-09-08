@@ -12,13 +12,13 @@ namespace Solution {
             // 1. ตรวจสอบว่ามีไอเท็มนี้ในคลังแล้วหรือยัง
             if (inventory.ContainsKey(item))
             {
-                inventory[item] = amount;
+                inventory[item] += amount;
             }
             else
             {
                 inventory.Add(item, amount);
             }
-                inventory.Add(item, amount);
+                
 
             Debug.Log("Added " + amount + " " + item + ". Total: " + inventory[item]);
         }

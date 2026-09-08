@@ -84,6 +84,9 @@ namespace Solution
                 mapGenerator.mapdata[positionX, positionY] = null;
                 positionX = toX;
                 positionY = toY;
+                lastPart.transform.position = new Vector3(toX, toY, 0);
+                mapGenerator.mapdata[positionX, positionY] = null;
+                
                 // 7. เพิ่มส่วนนั้นกลับเข้าไปเป็นส่วนที่สองของ LinkedList
                 // (ซึ่งก็คือส่วนแรกของลำตัว)
                 Parade.AddFirst(lastNode);
